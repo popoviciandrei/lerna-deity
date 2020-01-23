@@ -1,7 +1,7 @@
 {
   "name": "@npmapopovici/deity-reviews-extension",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "reviews graphql schema & types",
   "publishConfig": {
     "access": "public"
