@@ -1,4 +1,3 @@
-export * from "./types";
 declare const _default: () => {
     resolvers: {
         BackendConfig: {

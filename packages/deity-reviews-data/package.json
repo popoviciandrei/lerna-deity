@@ -40,5 +40,6 @@
     "apollo-client": "^2.6.4",
     "graphql-tag": "^2.10.1",
     "react": "^16.10.2"
-  }
+  },
+  "gitHead": "e2e8d4157e163319b5992808dd4791c9f56dd5d9"
 }
