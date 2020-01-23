@@ -1,6 +1,6 @@
 {
   "name": "@npmapopovici/deity-reviews-data",
-  "license": "MIT",
+  "license": "OSL-3.0",
   "version": "0.0.3",
   "description": "reviews graphql schema & types",
   "publishConfig": {
@@ -16,7 +16,7 @@
     "src"
   ],
   "scripts": {
-    "prepare": "npm run clean && npm run build",
+    "prepare": "yarn run clean && yarn run build",
     "clean": "falcon-scripts clean",
     "build": "falcon-scripts build",
     "watch": "falcon-scripts watch"
@@ -43,5 +43,5 @@
     "graphql-tag": "^2.10.1",
     "react": "^16.10.2"
   },
-  "gitHead": "e2e8d4157e163319b5992808dd4791c9f56dd5d9"
+  "gitHead": "5e6a7e0c2a330203289adbfafcd3b748bf4bef91"
 }

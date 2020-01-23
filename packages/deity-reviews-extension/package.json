@@ -1,7 +1,7 @@
 {
   "name": "@npmapopovici/deity-reviews-extension",
-  "license": "MIT",
-  "version": "0.0.3",
+  "license": "OSL-3.0",
+  "version": "0.0.4",
   "description": "reviews graphql schema & types",
   "publishConfig": {
     "access": "public"
@@ -16,7 +16,7 @@
     "README.md"
   ],
   "scripts": {
-    "prepare": "npm run clean && npm run build",
+    "prepare": "yarn run clean && yarn run build",
     "clean": "falcon-scripts clean",
     "build": "falcon-scripts build",
     "watch": "falcon-scripts watch"
@@ -31,7 +31,7 @@
     "graphql": "^14.5.8",
     "regenerator-runtime": "0.13.3"
   },
-  "gitHead": "e2e8d4157e163319b5992808dd4791c9f56dd5d9",
+  "gitHead": "5e6a7e0c2a330203289adbfafcd3b748bf4bef91",
   "peerDependencies": {
     "graphql": "^14.5.8"
   }
