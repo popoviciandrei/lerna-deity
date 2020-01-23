@@ -1,0 +1,24 @@
+extend type Query{
+	review( postId: Int! ): Review
+	reviewList(): ReviewList
+}
+
+extend type BackendConfig{
+	review: ReviewConfig;
+}
+
+type ReviewConfig {
+  _: Boolean
+}
+
+type ReviewList {
+  items: [Review!]!
+}
+
+type Review {
+  postId: Int
+  id: Int
+  name: String
+  email: String
+  body: String
+}
