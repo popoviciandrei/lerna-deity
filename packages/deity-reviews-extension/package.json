@@ -6,7 +6,6 @@
   "publishConfig": {
     "access": "public"
   },
-  
   "module": "dist/index.js",
   "types": "dist/types.d.ts",
   "source": "src/index.ts",
@@ -29,7 +28,11 @@
   },
   "devDependencies": {
     "@deity/falcon-scripts": "1.0.0-beta.11",
+    "graphql": "^14.5.8",
     "regenerator-runtime": "0.13.3"
   },
-  "gitHead": "e2e8d4157e163319b5992808dd4791c9f56dd5d9"
+  "gitHead": "e2e8d4157e163319b5992808dd4791c9f56dd5d9",
+  "peerDependencies": {
+    "graphql": "^14.5.8"
+  }
 }
