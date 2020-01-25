@@ -24,7 +24,7 @@
   "dependencies": {
     "@babel/runtime": "^7.8.3",
     "@deity/falcon-data": "^1.0.0-beta.11",
-    "@npmapopovici/deity-reviews-extension": "^0.0.3",
+    "@npmapopovici/deity-reviews-extension": "^0.0.5",
     "core-js": "3.2.1"
   },
   "devDependencies": {
