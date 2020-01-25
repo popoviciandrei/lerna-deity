@@ -2,6 +2,7 @@ import { Pagination } from "@deity/falcon-data";
 
 export type ReviewList = {
   items: Review[];
+  pagination?: Pagination;
 };
 
 export type Review = {
