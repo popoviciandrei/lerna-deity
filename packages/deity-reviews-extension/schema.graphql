@@ -1,18 +1,18 @@
-extend type Query{
-	review( postId: Int! ): Review
-	reviewList(): ReviewList
+extend type Query {
+  review(postId: Int!): Review
+  reviewList(query: ReviewQuery!): ReviewList
 }
 
-extend type BackendConfig{
-	review: ReviewConfig;
+extend type BackendConfig {
+  review: ReviewConfig
 }
 
 type ReviewConfig {
   _: Boolean
 }
 
-type ReviewList {
-  items: [Review!]!
+input ReviewQuery {
+  postId: Int!
 }
 
 type Review {
@@ -21,4 +21,8 @@ type Review {
   name: String
   email: String
   body: String
+}
+
+type ReviewList {
+  items: [Review!]!
 }
