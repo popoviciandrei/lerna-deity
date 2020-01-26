@@ -1,6 +1,6 @@
 extend type Query {
-  review(postId: Int!): Review
-  reviewList(postId: Int, pagination: PaginationInput): ReviewList
+  review(id: Int!): Review
+  reviewList(query: ReviewQuery, pagination: PaginationInput): ReviewList
 }
 
 extend type BackendConfig {
@@ -12,7 +12,9 @@ type ReviewConfig {
 }
 
 input ReviewQuery {
-  postId: Int!
+  postId: Int
+  name: String
+  email: String
 }
 
 type Review {
@@ -25,4 +27,6 @@ type Review {
 
 type ReviewList {
   items: [Review!]!
+  pagination: Pagination
+  totalItems: Int
 }
