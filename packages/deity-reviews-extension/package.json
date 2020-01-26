@@ -1,7 +1,7 @@
 {
   "name": "@npmapopovici/deity-reviews-extension",
   "license": "OSL-3.0",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "reviews graphql schema & types",
   "publishConfig": {
     "access": "public"

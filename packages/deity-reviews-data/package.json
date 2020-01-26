@@ -1,7 +1,7 @@
 {
   "name": "@npmapopovici/deity-reviews-data",
   "license": "OSL-3.0",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "reviews graphql schema & types",
   "publishConfig": {
     "access": "public"
@@ -24,7 +24,7 @@
   "dependencies": {
     "@babel/runtime": "^7.8.3",
     "@deity/falcon-data": "^1.0.0-beta.11",
-    "@npmapopovici/deity-reviews-extension": "^0.0.7",
+    "@npmapopovici/deity-reviews-extension": "^0.0.8",
     "core-js": "3.2.1"
   },
   "devDependencies": {
