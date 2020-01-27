@@ -5,13 +5,14 @@ export type ReviewList = {
   pagination?: Pagination;
 };
 
+export type ReviewListQueryInput = {
+    postId: number;
+    name: string;
+    email: string;
+  };
+
 export type ReviewListQuery = {
   query: ReviewListQueryInput;
-};
-export type ReviewListQueryInput = {
-  postId: number;
-  name: string;
-  email: string;
 };
 
 export type Review = {
