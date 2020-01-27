@@ -1,8 +1,7 @@
 {
-  "name": "@npmapopovici/deity-reviews-data",
+  "name": "@npmapopovici/deity-reviews-ui",
+  "version": "0.0.1",
   "license": "OSL-3.0",
-  "version": "0.0.10",
-  "description": "reviews graphql schema & types",
   "publishConfig": {
     "access": "public"
   },
@@ -23,25 +22,16 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.8.3",
-    "@deity/falcon-data": "^1.0.0-beta.11",
-    "@npmapopovici/deity-reviews-extension": "^0.0.8",
     "core-js": "3.2.1"
   },
   "devDependencies": {
     "@deity/falcon-scripts": "1.0.0-beta.11",
     "@types/react": "16.9.11",
-    "apollo-client": "2.6.4",
-    "graphql": "^14.5.8",
-    "graphql-tag": "2.10.1",
-    "prop-types": "15.7.2",
     "react": "16.10.2",
+    "prop-types": "15.7.2",
     "regenerator-runtime": "0.13.3"
   },
   "peerDependencies": {
-    "apollo-client": "^2.6.4",
-    "graphql": "^14.5.8",
-    "graphql-tag": "^2.10.1",
     "react": "^16.10.2"
-  },
-  "gitHead": "b1869dee18a3fdcf25bd3e7de0b88229008da644"
+  }
 }
