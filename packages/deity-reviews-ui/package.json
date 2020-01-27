@@ -5,7 +5,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/deity-reviews-data.cjs.js",
+  "main": "dist/deity-reviews-ui.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types.d.ts",
   "sideEffects": false,
@@ -34,5 +34,5 @@
   "peerDependencies": {
     "react": "^16.10.2"
   },
-  "gitHead": "3c6c8298ffb2e48b80accac06741e829d80c5132"
+  "gitHead": "57edc7004e5f236e3ecf0d9b18b5201d91665602"
 }
