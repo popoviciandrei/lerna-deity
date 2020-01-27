@@ -33,6 +33,11 @@ module.exports = class ReviewsApi extends ApiDataSource {
         });
     }
 
+    /**
+     * Return a review per id
+     * @param {object} _
+     * @param {object} param1
+     */
     async review(_, {
         id
     }) {
@@ -49,13 +54,15 @@ module.exports = class ReviewsApi extends ApiDataSource {
         })
     }
 
-    async reviewList(_, {
-        query,
-        pagination
-    }) {
+    /**
+     * Return list of reviews
+     * @param {object} _
+     * @param {object} param1
+     */
+    async reviewList(_, {input: {pagination, ...rest}}) {
 
         const payload = {
-            ...query
+            ...rest
         }
 
         payload.perPage = get(pagination, 'perPage', 10);
