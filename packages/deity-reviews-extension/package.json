@@ -31,7 +31,7 @@
     "graphql": "^14.5.8",
     "regenerator-runtime": "0.13.3"
   },
-  "gitHead": "57edc7004e5f236e3ecf0d9b18b5201d91665602",
+  "gitHead": "16d4d0b2aa2e0ff71c285c2f5f155539148b9730",
   "peerDependencies": {
     "graphql": "^14.5.8"
   }

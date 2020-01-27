@@ -24,7 +24,7 @@
   "dependencies": {
     "@babel/runtime": "^7.8.3",
     "@deity/falcon-data": "^1.0.0-beta.11",
-    "@npmapopovici/deity-reviews-extension": "^0.0.8",
+    "@npmapopovici/deity-reviews-extension": "^0.0.11",
     "core-js": "3.2.1"
   },
   "devDependencies": {
@@ -43,5 +43,5 @@
     "graphql-tag": "^2.10.1",
     "react": "^16.10.2"
   },
-  "gitHead": "57edc7004e5f236e3ecf0d9b18b5201d91665602"
+  "gitHead": "16d4d0b2aa2e0ff71c285c2f5f155539148b9730"
 }
