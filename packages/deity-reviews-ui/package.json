@@ -5,7 +5,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/deity-reviews-ui.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types.d.ts",
   "sideEffects": false,
