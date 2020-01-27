@@ -1,18 +1,15 @@
-import { Pagination } from "@deity/falcon-data";
+import { Pagination, PaginationInput } from "@deity/falcon-data";
 
 export type ReviewList = {
   items: Review[];
   pagination?: Pagination;
 };
 
-export type ReviewListQueryInput = {
-    postId: number;
-    name: string;
-    email: string;
-  };
-
-export type ReviewListQuery = {
-  query: ReviewListQueryInput;
+export type ReviewListInput = {
+  postId?: number;
+  name?: string;
+  email?: string;
+  pagination?: PaginationInput;
 };
 
 export type Review = {

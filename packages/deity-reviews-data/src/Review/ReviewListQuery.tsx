@@ -1,15 +1,14 @@
 import gql from "graphql-tag";
-import { PaginationQuery, PaginationInput, Query } from "@deity/falcon-data";
+import { Query, OperationInput } from "@deity/falcon-data";
 import {
-  Review,
-  ReviewList,
-  ReviewListQuery,
-  ReviewListQueryInput
+    Review,
+    ReviewList,
+    ReviewListInput
 } from "@npmapopovici/deity-reviews-extension";
 
 const GET_REVIEW_LIST = gql`
-  query Reviews($query: ReviewListQueryInput, $pagination: PaginationInput) {
-    reviewList(quer: $query, pagination: $pagination) {
+  query Reviews($input: ReviewListInput ) {
+    reviewList(input: $input) {
       items {
         postId
         id
@@ -28,18 +27,16 @@ const GET_REVIEW_LIST = gql`
 `;
 
 export type ReviewListResponse = {
-  reviewList: Pick<ReviewList, "pagination"> & {
-    items: Pick<Review, "postId" | "id" | "name" | "email" | "body">[];
-  };
+    reviewList: Pick<ReviewList, "pagination"> & {
+        items: Pick<Review, "postId" | "id" | "name" | "email" | "body">[];
+    };
 };
 
-export type ReviewListQueryVariables = ReviewListQuery & PaginationQuery;
-
 export class ReviewQListuery extends Query<
-  ReviewListResponse,
-  ReviewListQueryVariables
-> {
-  static defaultProps = {
-    query: GET_REVIEW_LIST
-  };
+    ReviewListResponse,
+    OperationInput<ReviewListInput>> {
+    static defaultProps = {
+        query: GET_REVIEW_LIST,
+        fetchPolicy: 'cache-and-network'
+    };
 }
