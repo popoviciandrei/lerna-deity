@@ -59,19 +59,25 @@ module.exports = class ReviewsApi extends ApiDataSource {
      * @param {object} _
      * @param {object} param1
      */
-    async reviewList(_, {input: {pagination, ...rest}}) {
+    async reviewList(_, {input: {pagination, ...filters}}) {
 
+        /**
+         * 'filters' can contain 'postId', 'name', 'email' key:value pairs
+         * that are used to be filtered when the .get request occurs
+         */
         const payload = {
-            ...rest
+            ...filters
         }
 
-        payload.perPage = get(pagination, 'perPage', 10);
-        payload.page = get(pagination, 'page', 0);
+        const substract = {
+          perPage : get(pagination, 'perPage', 10),
+          page : get(pagination, 'page', 0)
+        }
 
         return this.get('', payload, {
             context: {
                 didReceiveResult: (result, res) => {
-                    return result ? this.processReviewsList(result, payload) : null;
+                    return result ? this.processReviewsList(result, substract) : null;
                 }
             }
         })
@@ -84,27 +90,14 @@ module.exports = class ReviewsApi extends ApiDataSource {
      * @returns {object}
      */
     processReviewsList(reviews, {
-        postId,
-        name,
-        email,
         perPage,
         page
     }) {
         const start = page * perPage;
         const end = start + perPage;
-        let totalItems = reviews.length;
-        let totalPages = ceil(totalItems / perPage);
-        const items = pipe(
-            (result) => postId ? result.filter(item => get(item, 'postId') === postId) : result,
-            (result) => name ? result.filter(item => get(item, 'name') === name) : result,
-            (result) => email ? result.filter(item => get(item, 'email') === email) : result,
-            (result) => {
-                totalItems = result.length;
-                totalPages = ceil(totalItems / perPage);
-                return slice(result, start, end);
-            }
-        )(reviews)
-
+        const totalItems = reviews.length;
+        const totalPages = ceil(totalItems / perPage);
+        const items =  slice(reviews, start, end);
 
         return {
             items,
