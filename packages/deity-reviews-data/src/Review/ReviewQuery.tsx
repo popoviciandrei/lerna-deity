@@ -1,9 +1,9 @@
-import gql from "graphql-tag";
-import { Query } from "@deity/falcon-data";
-import { Review } from "@npmapopovici/deity-reviews-extension";
+import gql from 'graphql-tag';
+import { Query } from '@deity/falcon-data';
+import { Review } from '@npmapopovici/deity-reviews-extension';
 
 const GET_REVIEW = gql`
-  query Review($id: int!) {
+  query Review($id: Int!) {
     review(id: $id) {
       postId
       id
@@ -15,7 +15,7 @@ const GET_REVIEW = gql`
 `;
 
 export type ReviewResponse = {
-  review: Pick<Review, "postId" | "id" | "name" | "email" | "body">;
+  review: Pick<Review, 'postId' | 'id' | 'name' | 'email' | 'body'>;
 };
 
 export type ReviewQueryVariables = {

@@ -1,4 +1,4 @@
-import { Pagination, PaginationInput } from "@deity/falcon-data";
+import { Pagination, PaginationInput } from '@deity/falcon-data';
 
 export type ReviewList = {
   items: Review[];
