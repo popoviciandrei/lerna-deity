@@ -6,14 +6,13 @@ On the product page (PDP) business wants to render the last 10 reviews of that p
 Display will be made as an accordion ( displaying only the email with button to show/hide the rest of the review )
 
 ## Tech stach used
-* The components is composed of 4 packages written using Lerna [https://github.com/lerna/lerna]
-* Packages have been pushed to npmjs.com
+* The components is composed of 4 packages that are using Lerna [https://github.com/lerna/lerna] to deploy them on npmjs.com.
 
 ## List of packages
-* deity-reviews-api
-* deity-reviews-data
-* deity-reviews-extension
-* deity-reviews-ui
+* deity-reviews-api - package that does the communication with the reviews servers to pull the reviews and give them back to the grapql client
+* deity-reviews-data - contains the graphql queries wrappers used by React frontend compoents to fetch info from graphql server
+* deity-reviews-extension - contains the graphql schema definition
+* deity-reviews-ui -  implements the React components that displays the reviews received from graphql server
 
 ## Quick start
 Steps to quick install and use this component.
