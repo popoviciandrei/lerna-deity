@@ -10,7 +10,7 @@
   "dependencies": {
     "@deity/falcon-logger": "1.0.x",
     "@deity/falcon-server-env": "^1.0.0-beta.11",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "qs": "^6.9.0"
   },
   "devDependencies": {
